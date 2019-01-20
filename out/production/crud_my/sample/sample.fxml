@@ -1,0 +1,40 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<VBox alignment="center" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.121"
+      fx:controller="sample.Controller">
+
+    <HBox fx:id="createOperation">
+        <TextField HBox.hgrow="ALWAYS" promptText="ФИО" fx:id="fioCreate"/>
+        <DatePicker HBox.hgrow="ALWAYS" promptText="Дата рождения" fx:id="dateBirthdayCreate"/>
+        <Button fx:id="btnCreate" onAction="#create" text="Create" />
+    </HBox>
+
+    <HBox fx:id="updateOperation">
+        <TextField HBox.hgrow="ALWAYS" promptText="ФИО (текущее)" fx:id="fioUpdate"/>
+        <TextField HBox.hgrow="ALWAYS" promptText="ФИО (новое)" fx:id="newFioUpdate"/>
+        <Button fx:id="btnUpdate" onAction="#update" text="Update" />
+    </HBox>
+
+    <HBox fx:id="deleteOperation">
+        <TextField HBox.hgrow="ALWAYS" promptText="ФИО" fx:id="fioDelete"/>
+        <Button fx:id="btnDelete" onAction="#delete" text="Delete" />
+    </HBox>
+
+    <TableView fx:id="tableUsers">
+        <columns>
+            <TableColumn prefWidth="350.0" text="ФИО" fx:id="fioColumn" />
+            <TableColumn prefWidth="150.0" text="Дата рождения" fx:id="dateColumn" />
+        </columns>
+    </TableView>
+
+</VBox>
